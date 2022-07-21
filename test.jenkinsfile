@@ -4,27 +4,21 @@ pipeline {
         timestamps()
     } 
 
-    agent {
-        node {
-            label any
-        }
-    }
-    
     stages {
         stage('Build') {
             steps {
-                echo "hello build!!"
-                }
+                echo 'Building..'
             }
         }
         stage('Test') {
             steps {
-                echo "hello Test!!"
+                echo 'Testing..'
             }
         }
-        stage('Deliver') { 
+        stage('Deploy') {
             steps {
-                echo "hello Test!!"
+                echo 'Deploying....'
+            }
         }
     }
 }
